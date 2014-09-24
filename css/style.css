@@ -1,0 +1,53 @@
+	header {
+		border:1px solid #000000;
+	}
+	label{
+		margin:0 15% 0 40%;
+		font-family:ArialNarrow,Arial,sans-serif;
+		font-size: 35px;
+	}
+	.p{
+		font-size:20px;
+		line-height:34px;
+	}
+	input {
+	    border: 1;
+	    outline: 2;
+	    background: opaque;
+	    width: 150px;
+	    text-align: center;
+	}
+	table {
+		padding:50px;
+	}
+	thead {
+		height:30px;	
+	}
+	th {
+		font-size:32px;
+	}
+	tr {
+		height:50px;
+	}
+	.header{
+		display: inline-block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    height: 100px; 
+	}
+    .padding {
+    	padding:50px;
+    }
+	#lineWrapper {
+	    border-bottom: 1px solid #000000;
+		margin: 0em;
+		padding: 0em;
+	} 
+	#image2{
+		margin-left:25%;
+	}
+	#container{
+		width: 800px;
+		margin:0 15% 0 15%;
+		border:1px solid #000000;
+	}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<title>Mad Libs</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+<div id="container" ng-controller="formCtrl">
+	<header style="">
+		<img class="header" src="images/mad-lib-happy-face.png" width="100" height="100" />
+		
+		<img id="image2" class="header" src="images/ng-mad-libs-logo.png" width="260" height="70"/><label>Automate This!</label>
+	</header>
+
+	<table align="center">
+	<thead><th colspan="3">Provide the following words:</th>
+		   <th colspan="3">&nbsp;</th>
+	</thead>
+	<form name="myForm" ng-submit="submitted=true; submit();">
+	<tr>
+		<td><input type="text" ng-model="data.personname" name="name" placeholder="person name" required></td>
+		<td><input type="text" ng-model="data.jobtitle" name="job" placeholder="job title" required></td>
+		<td><input type="text" ng-model="data.tedioustask" name="tedious_task" placeholder="tedious task" required></td>
+	</tr>
+	<tr>
+		
+		<td><input type="text" ng-model="data.dirtytask" name="dirty_task" placeholder="dirty task" required></td>
+		<td><input type="text" ng-model="data.celebrity" name="celebrity" placeholder="celebrity" required></td>
+		<td><input type="text" ng-model="data.uselessskill" name="useless skill" placeholder="useless skill" required></td>
+	</tr>
+	<tr>
+		<td><input type="text" ng-model="data.adjective" name="adjective" placeholder="adjective" required></td>
+		<td><input type="text" ng-model="data.obnoxiouscelebrity" name="obnoxious_celebrity" placeholder="obnoxious celebrity" required></td>
+		<td><input type="number" ng-model="data.hugenumber" name="huge_number" placeholder="huge number" required>
+		</td>
+	</tr>
+	<tr>	
+		<td></td>
+		<td><input type="submit" value="Generate my Mad Lib"></td>
+		<td></td>
+	</tr>
+	</form>
+	</table>
+
+	<div id="lineWrapper"></div>
+	<div ng-hide="!submitted" ng-show="submitted" class="padding">
+		<p><u>{{data.personname}}</u> was an <u>{{data.jobtitle}}</u> who loved technology. Although she loved parts of her job, she absolutely hated  <u>{{data.tedioustask}}</u> and <u>{{data.dirtytask}}</u>. So, <u>{{data.personname}}</u> met with her life mentor <u>{{data.celebrity}}</u> who told her to learn how to <u>{{data.uselessskill}}</u> with Thinkful. Thinkful didn't offer a course on <u>{{data.uselessskill}}</u> so she studied programming instead. </p>
+
+		<p>What a great decision! With her new skills, {{data.personname}} built a(n) <u>{{data.adjective}}</u> robot named <u>{{data.obnoxiuouscelbertity}}</u> that not only loved <u>{{data.dirtytask}}</u> but did it <u>{{data.hugenumber}}</u> faster.</p>
+		<p><input type="submit" ng-click="submitted=false; reset();" value="Start Over"></p>
+	</div>
+
+</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
