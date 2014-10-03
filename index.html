@@ -15,7 +15,7 @@
 		<img id="image2" class="header" src="images/ng-mad-libs-logo.png" width="260" height="70"/><label>Automate This!</label>
 	</header>
 
-	<table align="center">
+	<table align="center" ng-hide="submitted">
 	<thead><th colspan="3">Provide the following words:</th>
 		   <th colspan="3">&nbsp;</th>
 	</thead>
@@ -34,7 +34,7 @@
 	<tr>
 		<td><input type="text" ng-model="data.adjective" name="adjective" placeholder="adjective" required></td>
 		<td><input type="text" ng-model="data.obnoxiouscelebrity" name="obnoxious_celebrity" placeholder="obnoxious celebrity" required></td>
-		<td><input type="number" ng-model="data.hugenumber" name="huge_number" placeholder="huge number" required>
+		<td><input type="number" ng-model="data.hugenumber" name="huge_number" placeholder="huge number" min="10" required>
 		</td>
 	</tr>
 	<tr>	
